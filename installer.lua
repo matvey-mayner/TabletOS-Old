@@ -10,7 +10,7 @@ local gpu = component.gpu
 local w,h = gpu.getResolution()
 gpu.setResolution(80,25)
 local totalLen = 0
-
+--[[
 local function drawProgressBar(x,y,w,colorEmpty,colorFilled,progress,maxProgress)
   colorEmpty = colorEmpty or 0x000000
   colorFilled = colorFilled or 0xFFFFFF
@@ -27,7 +27,7 @@ local function drawProgressBar(x,y,w,colorEmpty,colorFilled,progress,maxProgress
   gpu.fill(x,y,progressVCordax,1," ")
   gpu.setBackground(oldBackground)
 end
-
+]]--Изза бага закоментировал
 local function internetRequest(url)
   local success, response = pcall(component.internet.request, url)
   if success then
