@@ -141,14 +141,12 @@ while true do
           CFC = CFC + #FLAV[i][r]
         end
       end
-      drawProgressBar(1,25,80,0xFF0000,0x00FF00,CFD,CFC)
       for i = 1, #FLAV do
         for r = 1, #FLAV[i] do
           gpu.fill(1,1,80,24," ")
           centerText(40,12,"Downloading " .. tostring(FLAV[i][r].path))
           getFile(FLAV[i][r].url,FLAV[i][r].path)
           CFD = CFD + 1
-          drawProgressBar(1,25,80,0xFF0000,0x00FF00,CFD,CFC)
         end
       end
       local strTW = "return \"" .. selectedVersion.version .. "\""
