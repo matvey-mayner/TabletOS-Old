@@ -4,7 +4,7 @@ local fs = require("filesystem")
 local shell = require("shell")
 local event = require("event")
 local unicode = require("unicode")
- local write = io.write
+local write = io.write
 local read = io.read
 local gpu = component.gpu
 local w,h = gpu.getResolution()
@@ -15,7 +15,7 @@ local function drawProgressBar(x,y,w,colorEmpty,colorFilled,progress,maxProgress
   colorEmpty = colorEmpty or 0x000000
   colorFilled = colorFilled or 0xFFFFFF
   progress = progress or 0
-  maxProgress = maxProgress or 100
+  maxProgress = maxProgress or 100 
   local h = 1
   local coff = w/maxProgress
   local celoe, drobnoe = math.modf(coff*progress)
@@ -66,7 +66,7 @@ local function getFile(url,filepath)
  end
 end
 
-local versionsRAW = "https://raw.githubusercontent.com/HeroBrine1st/TabletOS/master/VERSIONS.txt"
+local versionsRAW = "https://raw.githubusercontent.com/matvey-mayner/TabletOS/master/VERSIONS.txt"
 print("Downloading versions list...")
 local success, reason = internetRequest(versionsRAW)
 if not success then error(reason) end
