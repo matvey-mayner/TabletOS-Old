@@ -8,7 +8,7 @@ local write = io.write
 local read = io.read
 local gpu = component.gpu
 local w,h = gpu.getResolution()
-gpu.setResolution(w,h)
+gpu.setResolution(80,25)
 local totalLen = 0
 
 local function drawProgressBar(x,y,w,colorEmpty,colorFilled,progress,maxProgress)
