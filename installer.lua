@@ -66,7 +66,7 @@ local function getFile(url,filepath)
  end
 end
 
-local versionsRAW = "https://raw.githubusercontent.com/matvey-mayner/TabletOS/master/VERSIONS.txt"
+local versionsRAW = "https://raw.githubusercontent.com/matvey-mayner/TabletOS-Old/master/VERSIONS.txt"
 print("Downloading versions list...")
 local success, reason = internetRequest(versionsRAW)
 if not success then error(reason) end
